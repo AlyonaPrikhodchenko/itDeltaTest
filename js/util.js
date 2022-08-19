@@ -1,0 +1,1 @@
+const isEscapeKey=e=>"Escape"===e.key||"Esc"===e.key;export{isEscapeKey};
