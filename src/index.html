@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html class="page" lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Ricardo Cooper</title>
+    <link rel="stylesheet" href="./css/style.min.css">
+</head>
+<body class="page__body">
+    <header class="page__header header">
+      <div class="header__user-wrapper">
+        <div class="header__image-wrapper">
+          <img src="./img/content/avatar.jpg" class="header__image" width="128" height="128" alt="Avatar.">
+          <h1 class="header__title">Ricardo Cooper</h1>
+        </div>
+        <ul class="header__menu reset-list">
+          <li class="header__menu-item">
+            <a class="header__menu-link" href="mailto:ric@post.com">Message</a>
+          </li>
+          <li class="header__menu-item">
+            <a class="header__menu-link header__menu-link--tel" href="tel:+7000000000">Call</a>
+          </li>
+        </ul>
+      </div>
+    </header>
+
+    <main class="page__content content">
+      <section class="content__photos photos">
+        <ul class="photos__list reset-list">
+        </ul>
+      </section>
+    </main>
+
+    <div class="page__modal modal modal--hidden">
+      <div class="modal__content">
+        <div class="modal__container">
+          <div class="modal__photo">
+            <img class="modal__img" src="./img/content/modal.jpg" alt="Photo modal." width="405" height="405">
+            <ul class="modal__photo-comments reset-list"></ul>
+          </div>
+          <form action="https://boiling-refuge-66454.herokuapp.com/images/:imageId/comments" method="post" class="modal__form">
+            <div class="modal__form-wrapper">
+              <label class="modal__form-label" for="comment">Comment</label>
+              <textarea class="modal__form-textarea" name="comment" id="comment" cols="30" rows="10"></textarea>
+              <p class="modal__comment-text">Write a few sentences about the photo.</p>
+              <button class="modal__submit" type="submit">Save</button>
+            </div>
+          </form>
+        </div>
+      </div>
+    </div>
+
+    <!-- Шаблон фотографий на странице -->
+    <template id="photo-card">
+      <li class="photos__item">
+        <a class="photos__link" href="#">
+          <img class="photos__image" src="./img/content/image.jpg" alt="Photo." width="432" height="216">
+        </a>
+        <p class="photos__id-wrapper">id: <span class="photos__id js-id"></span></p>
+      </li>
+    </template>
+
+    <script src="./js/script.js" type="module"></script>
+</body>
+</html>

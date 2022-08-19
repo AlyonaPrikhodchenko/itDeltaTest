@@ -1,0 +1,21 @@
+.page {
+  height: 100%;
+}
+
+.page__body {
+  display: grid;
+  grid-template-rows: auto 1fr auto;
+  max-width: 1358px;
+  min-height: 100%;
+  margin: 0 auto;
+  padding: 0;
+  background-color: $color-bg;
+}
+
+.page__header {
+  margin-bottom: 46px;
+}
+
+.page__content {
+  margin-bottom: 46px;
+}

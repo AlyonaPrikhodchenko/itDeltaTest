@@ -1,0 +1,21 @@
+.photos__list {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, 431px);
+  gap: 32px;
+  justify-content: center;
+}
+
+.photos__link {
+  display: block;
+  margin-bottom: 8px;
+  width: 100%;
+}
+
+.photos__image {
+  display: block;
+  border-radius: 8px;
+}
+
+.photos__id-wrapper {
+  margin: 0;
+}
