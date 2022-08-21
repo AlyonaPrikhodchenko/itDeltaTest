@@ -1,1 +1,1 @@
-const isEscapeKey=e=>"Escape"===e.key||"Esc"===e.key;export{isEscapeKey};
+const isEscapeKey=e=>"Escape"===e.key||"Esc"===e.key,createComments=(e,t)=>{if(e.length>0){const o=document.createElement("li");e.forEach((e=>{o.textContent=e.text})),t.append(o)}},closePopup=e=>{const t=document.querySelector(".modal"),o=t.querySelector(".modal__content");document.addEventListener("keydown",(t=>{isEscapeKey(t)&&(t.preventDefault(),e.remove())})),o.onclick=function(e){e.stopPropagation()},t.onclick=function(){e.remove()}};export{createComments,closePopup};

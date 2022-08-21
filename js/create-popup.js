@@ -1,0 +1,1 @@
+import{createComments}from"./util.js";const popupTemplate=document.querySelector("#popup").content.querySelector(".modal"),addContentPopup=e=>{const o=popupTemplate.cloneNode(!0),t=o.querySelector(".modal__img"),p=o.querySelector(".modal__photo-comments");return t.src=e.url,createComments(e.comments,p),o};export{addContentPopup};

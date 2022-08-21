@@ -1,1 +1,0 @@
-import{photoList}from"./create-card.js";import{isEscapeKey}from"./util.js";const modal=document.querySelector(".modal"),openModal=()=>{photoList.addEventListener("click",(e=>{e.target&&modal.classList.remove("modal--hidden")})),document.addEventListener("keydown",(e=>{isEscapeKey(e)&&(e.preventDefault(),modal.classList.add("modal--hidden"))}))};export{openModal};

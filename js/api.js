@@ -1,1 +1,1 @@
-const URL_GET_PHOTO="https://boiling-refuge-66454.herokuapp.com/images",getData=t=>{fetch(URL_GET_PHOTO).then((t=>t.json())).then((e=>{t(e)})).catch((t=>{alert(t)}))};export{getData};
+const URL_GET_PHOTO="https://boiling-refuge-66454.herokuapp.com/images",getData=t=>{fetch(URL_GET_PHOTO).then((t=>t.json())).then((e=>{t(e)})).catch((t=>{console.log(t)}))};async function getFullImage(t){try{const e=await fetch(`https://boiling-refuge-66454.herokuapp.com/images/${t}`);return await e.json()}catch(t){console.log(t)}}export{getData,getFullImage};
