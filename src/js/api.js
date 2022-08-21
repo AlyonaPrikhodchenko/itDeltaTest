@@ -7,28 +7,18 @@ const getData = (onSuccess) => {
       onSuccess(cards);
     })
     .catch ((err) => {
-      alert(err);
+      console.log(err);
     })
 };
 
 async function getFullImage(id)  {
   try {
-    const response = await fetch(`https://boiling-refuge-66454.herokuapp.com/images/${id}`)
+    const response = await fetch(`https://boiling-refuge-66454.herokuapp.com/images/${id}`);
     return  await response.json();
-  } catch (e) {
-    console.log(e)
+  } catch (err) {
+    console.log(err)
   }
 }
 
-async function postData(id, data) {
-  const response = await fetch(`https://boiling-refuge-66454.herokuapp.com/images/${id}/comments`, {
-    method: 'POST',
-    headers: {
-      'Content-Type': 'application/json'
-    },
-    body: JSON.stringify(data)
-  });
-  return await response.json();
-}
 
-export { getData, getFullImage, postData };
+export { getData, getFullImage };

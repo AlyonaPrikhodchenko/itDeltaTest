@@ -32,14 +32,15 @@
       </section>
     </main>
 
-    <div class="page__modal modal modal--hidden">
+  <template id="popup">
+    <div class="page__modal modal">
       <div class="modal__content">
         <div class="modal__container">
           <div class="modal__photo">
             <img class="modal__img" alt="Photo modal." width="405" height="405">
             <ul class="modal__photo-comments reset-list"></ul>
           </div>
-          <form method="post" class="modal__form">
+          <form action="#" method="post" class="modal__form">
             <div class="modal__form-wrapper">
               <label class="modal__form-label" for="comment">Comment</label>
               <textarea class="modal__form-textarea" name="comment" id="comment" cols="30" rows="10"></textarea>
@@ -50,6 +51,7 @@
         </div>
       </div>
     </div>
+  </template>
 
     <!-- Шаблон фотографий на странице -->
     <template id="photo-card">
@@ -61,6 +63,6 @@
       </li>
     </template>
 
-    <script src="./js/script.js" type="module"></script>
+    <script src="./js/index.js" type="module"></script>
 </body>
 </html>
