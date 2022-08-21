@@ -1,6 +1,6 @@
 const isEscapeKey = (evt) => evt.key === 'Escape' || evt.key === 'Esc';
 
-const createComments = (comments, container) => {
+const addComments = (comments, container) => {
   if (comments.length > 0) {
     const item = document.createElement('li');
     comments.forEach((comment) => {
@@ -14,23 +14,23 @@ const closePopup = (popup) => {
   const modalWindow = document.querySelector(".modal");
   const modalContent = modalWindow.querySelector(".modal__content");
 
-  document.addEventListener('keydown', (evt) => {
-    if (isEscapeKey(evt)) {
-      evt.preventDefault();
-      popup.remove()
+    document.addEventListener('keydown', (evt) => {
+      if (isEscapeKey(evt)) {
+        evt.preventDefault();
+        popup.remove()
+      }
+    })
+
+    modalContent.onclick = function(evt) {
+      evt.stopPropagation();
     }
-  })
 
-  modalContent.onclick = function(evt) {
-    evt.stopPropagation();
-  }
-
-  modalWindow.onclick = function() {
-    popup.remove();
-  }
+    modalWindow.onclick = function() {
+      popup.remove();
+    }
 }
 
 export {
-  createComments,
+  addComments,
   closePopup
 };

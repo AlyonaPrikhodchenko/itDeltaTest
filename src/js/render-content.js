@@ -1,5 +1,5 @@
 import { showPhotoCard } from "./create-card.js";
-import { getFullImage } from "./api.js";
+import { getFullImage, postData } from "./api.js";
 import { addContentPopup } from "./create-popup.js";
 import { closePopup } from "./util.js";
 
@@ -18,8 +18,28 @@ const renderCards = (cards) => {
 
       bodyEl.append(createPopap);
 
+
+      const form = document.querySelector('.modal__form');
+
+      form.addEventListener('submit', async (evt) => {
+        evt.preventDefault();
+        const modal = document.querySelector('.modal');
+        const comment = form.querySelector('#comment');
+
+        const body = {
+          name: data.id,
+          comment: comment.value
+        }
+
+        const response = await postData(body, data.id)
+        if (response.status === 204) {
+          modal.remove();
+        }
+      })
+
       closePopup(createPopap)
     })
+
   });
 }
 

@@ -1,4 +1,4 @@
-import { createComments } from "./util.js";
+import { addComments } from "./util.js";
 
 const popupTemplate = document.querySelector('#popup')
   .content
@@ -10,7 +10,7 @@ const addContentPopup = (data) => {
   const commentsContainer = popupElement.querySelector('.modal__photo-comments');
 
   fullPhoto.src = data.url;
-  createComments(data.comments, commentsContainer);
+  addComments(data.comments, commentsContainer);
 
   return popupElement;
 }

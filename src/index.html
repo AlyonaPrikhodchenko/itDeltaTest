@@ -40,10 +40,10 @@
             <img class="modal__img" alt="Photo modal." width="405" height="405">
             <ul class="modal__photo-comments reset-list"></ul>
           </div>
-          <form action="#" method="post" class="modal__form">
+          <form action="#" method="post" class="modal__form" enctype="multipart/form-data" autocomplete="off">
             <div class="modal__form-wrapper">
               <label class="modal__form-label" for="comment">Comment</label>
-              <textarea class="modal__form-textarea" name="comment" id="comment" cols="30" rows="10"></textarea>
+              <textarea class="modal__form-textarea" name="comment" id="comment" cols="30" rows="10" required></textarea>
               <p class="modal__comment-text">Write a few sentences about the photo.</p>
               <button class="modal__submit" type="submit">Save</button>
             </div>
