@@ -11,8 +11,9 @@ const addComments = (comments, container) => {
 }
 
 const closePopup = (popup) => {
-  const modalWindow = document.querySelector(".modal");
-  const modalContent = modalWindow.querySelector(".modal__content");
+  const modalWindow = document.querySelector('.modal');
+  const modalContent = modalWindow.querySelector('.modal__content');
+  const buttonMobile = modalWindow.querySelector('.modal__close-button')
 
     document.addEventListener('keydown', (evt) => {
       if (isEscapeKey(evt)) {
@@ -28,6 +29,10 @@ const closePopup = (popup) => {
     modalWindow.onclick = function() {
       popup.remove();
     }
+
+    buttonMobile.addEventListener('click', () => {
+      popup.remove();
+    })
 }
 
 export {
