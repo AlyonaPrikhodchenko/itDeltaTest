@@ -1,6 +1,6 @@
 .photos__list {
   display: grid;
-  grid-template-columns: repeat(auto-fit, 431px);
+  grid-template-columns: repeat(auto-fit, minmax(320px, 431px));
   gap: 32px;
   justify-content: center;
 }
@@ -14,6 +14,17 @@
 .photos__image {
   display: block;
   border-radius: 8px;
+  object-fit: cover;
+  max-width: 100%;
+
+  &:hover {
+    opacity: 0.8;
+  }
+
+
+  &:active {
+    opacity: 0.5;
+  }
 }
 
 .photos__id-wrapper {
