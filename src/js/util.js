@@ -6,19 +6,19 @@ const addComments = (comments, container) => {
     comments.forEach((comment) => {
       item.textContent = comment.text;
     })
-    container.append(item)
+    container.append(item);
   }
 }
 
 const closePopup = (popup) => {
   const modalWindow = document.querySelector('.modal');
   const modalContent = modalWindow.querySelector('.modal__content');
-  const buttonMobile = modalWindow.querySelector('.modal__close-button')
+  const buttonMobile = modalWindow.querySelector('.modal__close-button');
 
     document.addEventListener('keydown', (evt) => {
       if (isEscapeKey(evt)) {
         evt.preventDefault();
-        popup.remove()
+        popup.remove();
       }
     })
 

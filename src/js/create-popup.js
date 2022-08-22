@@ -15,4 +15,6 @@ const addContentPopup = (data) => {
   return popupElement;
 }
 
-export { addContentPopup };
+export {
+  addContentPopup
+};

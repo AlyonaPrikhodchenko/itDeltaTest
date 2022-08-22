@@ -14,7 +14,7 @@ async function getFullImage(id)  {
     const response = await fetch(`https://boiling-refuge-66454.herokuapp.com/images/${id}`);
     return await response.json();
   } catch (err) {
-    console.log(err)
+    console.log(err);
   }
 }
 
@@ -29,8 +29,12 @@ async function postData(data, id) {
     });
     return response;
   } catch (err){
-    console.log(err)
+    console.log(err);
   }
 }
 
-export { getData, getFullImage, postData };
+export {
+  getData,
+  getFullImage,
+  postData
+};

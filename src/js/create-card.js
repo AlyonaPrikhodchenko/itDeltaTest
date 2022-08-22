@@ -13,4 +13,6 @@ const showPhotoCard = (card) => {
   return cardElement;
 }
 
-export { showPhotoCard };
+export {
+  showPhotoCard
+};

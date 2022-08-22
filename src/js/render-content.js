@@ -14,10 +14,8 @@ const renderCards = (cards) => {
     card.addEventListener('click', async (evt) => {
       evt.preventDefault();
       const data = await getFullImage(element.id);
-      const createPopap = addContentPopup(data)
-
+      const createPopap = addContentPopup(data);
       bodyEl.append(createPopap);
-
 
       const form = document.querySelector('.modal__form');
 
@@ -31,16 +29,18 @@ const renderCards = (cards) => {
           comment: comment.value
         }
 
-        const response = await postData(body, data.id)
+        const response = await postData(body, data.id);
         if (response.status === 204) {
           modal.remove();
         }
       })
 
-      closePopup(createPopap)
+      closePopup(createPopap);
     })
 
   });
 }
 
-export { renderCards };
+export {
+  renderCards
+};
